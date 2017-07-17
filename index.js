@@ -40,13 +40,12 @@ app.use('/api/user', userInfo)
 app.get('/*', (req, res)=>{
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
-let MONGODB;
-
+let MONGODB; 
 if(process.env.NODE_ENV != 'production'){
   mongoose.connect('mongodb://localhost/salud', {useMongoClient: true})
   console.log('MONGODB is running in LOCALLY');
 } else {
-  mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
+  mongoose.connect('mongodb://person:person@ds151059.mlab.com:51059/yelp', {useMongoClient: true})
   console.log('MONGODB is running PRODUCTION');
 }
 
