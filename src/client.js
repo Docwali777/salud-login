@@ -22,8 +22,9 @@ componentWillMount = () =>{
     this.lock.getUserInfo(authResult.accessToken, (error, profile)=>{
       if(error){
         console.log(error);
+
       }
-      console.log(authResult)
+      console.log(profile)
           browserHistory.push('/')
       localStorage.setItem("accessToken", authResult.accessToken);
     localStorage.setItem("profile", JSON.stringify(profile));
@@ -41,7 +42,6 @@ showLock = () =>{
 }
 
   render(){
-    console.log(this.props);
     return(
       <div className='text-center'>
         <Menu onLoginClick={this.showLock} />

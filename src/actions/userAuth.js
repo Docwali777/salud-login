@@ -5,7 +5,6 @@ export function userRegistration(user){
   return (dispatch) =>{
     return  axios.post('/api/user', user)
       .then(res =>{
-          console.log('AXIOS', res);
         dispatch({
           type:'REGISTER_USER',
           payload: res.data

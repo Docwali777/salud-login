@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise
+// mongoose.Promise = global.Promise
 
 const passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;

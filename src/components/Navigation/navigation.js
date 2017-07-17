@@ -23,7 +23,7 @@ onLoginClick = () =>{
             </Nav>
 
             <Nav pullRight>
-              <NavItem onClick={()=>this.onLoginClick()} eventKey={1} href="#" > Register</NavItem>
+            <NavItem onClick={()=>this.onLoginClick()} eventKey={1} href="#" > Register</NavItem>
               <NavItem eventKey={2} href="/contact" >Contact</NavItem>
             </Nav>
           </Navbar.Collapse>
